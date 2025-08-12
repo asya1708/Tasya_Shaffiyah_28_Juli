@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Times New Roman, sans-serif;
+      background-color: #ADD8E6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: pink;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ADD8E6;
+      color: white;
+      border: dashed  ;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00008B;
+    }
+    
+    .error{
+        color: red;
+        font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="syasyasya">
+      <input type="text" id="username" placeholder="Masukkan Username" />
+      <input type="password" id="password" placeholder="Masukkan Password" />
+      <button type="submit">Login</button>
+      <div id="eror-message" class="error"></div>
+      <p>Belum punya akun? <a href="#">Daftar akun</a></p>
+    </form>
+  </div>
+  
+<script>
+    document.getElementById("syasyasya").addEventListener('submit', function(event) {
+        event.preventDefault(); //Mencegah form untuk submit secara default
+    
+        //Mendapatkan nilai username dan password
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var erormessage = document.getElementById('eror-message');
+     
+        //Validasi Username dan password
+        if (username === '' || password === '') {
+            erormessage.textContent = 'assalamualaikum';
+        } else if (username!=='tasya'||password!=='176')
+           erormessage.textContent = 'username atau password salah';
+        } else {
+            erormessage.textContent=''
+            alert('sukses login')
+        }
+        
+    });
+</script>
+
+</body>
+</html>
